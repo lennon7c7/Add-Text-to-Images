@@ -21,8 +21,8 @@ This is a simple image editor built with JavaScript. It allows users to upload a
 6. Click 'Download' to download the edited image.
 
 ## Future Improvements
-- Add more text customization options, such as text alignment and line height.
-- Improve the user interface for a better user experience.
+- Add more text customization options, such as text alignment and presets.
+- Dragging needs to be fixed for touchscreen devices
 
 ## License
 See the LICENSE file for details.
