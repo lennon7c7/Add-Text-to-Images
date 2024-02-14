@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Editor</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    </head>  
+<body>
+    <h1 style="font-size: 2em; text-align: center;margin-bottom:50px">Add Text to Image 🖼️</h1>
+    <button onclick="window.location.href='https://github.com/sankeer28/Add-Text-to-Images'">
+        GitHub
+    </button>
+    <div id="textContainer"></div>
+    <div id="container">
+        <div class="button-container">
+            <label for="imgUpload" class="add-image-button">Add Image</label>
+            <input type="file" id="imgUpload" accept="image/*">
+            <button id="loadImgBtn">Load from URL</button>
+            <input type="text" id="imgUrl" value="Enter URL">
+            
+        </div>
+        <br>
+        <button onclick="addText()">Add Text</button>
+        <button id="downloadBtn">Download Image</button>
+        <input type="color" id="colorPicker">
+        <input type="number" id="textSize" value="25" min="1" max="1000">
+        <button id="boldBtn">Bold</button>
+        <button id="italicBtn">Italic</button>
+        <button id="underlineBtn">Underline</button>
+        <button id="shadowBtn">Drop Shadow</button>
+        <select id="fontSelect">
+        <option value="Arial">Arial</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Palatino Linotype">Palatino Linotype</option>
+        <option value="Book Antiqua">Book Antiqua</option>
+        <option value="Comic Sans MS">Comic Sans MS</option>
+        <option value="Impact">Impact</option>
+        <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+        <option value="Lucida Grande">Lucida Grande</option>
+        <option value="Tahoma">Tahoma</option>
+        <option value="Geneva">Geneva</option>
+        <option value="Trebuchet MS">Trebuchet MS</option>
+        <option value="Helvetica">Helvetica</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Courier">Courier</option>
+        <option value="Lucida Console">Lucida Console</option>
+        <option value="Monaco">Monaco</option>
+        <option value="Garamond">Garamond</option>
+        <option value="Baskerville">Baskerville</option>
+        <option value="Bodoni MT">Bodoni MT</option>
+        <option value="Bell MT">Bell MT</option>
+        <option value="Bernard MT Condensed">Bernard MT Condensed</option>
+        <option value="Calisto MT">Calisto MT</option>
+        <option value="Century Schoolbook">Century Schoolbook</option>
+        <option value="Consolas">Consolas</option>
+        <option value="Copperplate Gothic Bold">Copperplate Gothic Bold</option>
+        <option value="Copperplate Gothic Light">Copperplate Gothic Light</option>
+        <option value="Engravers MT">Engravers MT</option>
+        <option value="Felix Titling">Felix Titling</option>
+        <option value="Gill Sans MT">Gill Sans MT</option>
+        <option value="Goudy Old Style">Goudy Old Style</option>
+        <option value="Ink Free">Ink Free</option>
+        <option value="Jokerman">Jokerman</option>
+        <option value="Juice ITC">Juice ITC</option>
+        <option value="Kristen ITC">Kristen ITC</option>
+        <option value="Magneto">Magneto</option>
+        <option value="Matura MT Script Capitals">Matura MT Script Capitals</option>
+        <option value="Modern No. 20">Modern No. 20</option>
+        <option value="Niagara Engraved">Niagara Engraved</option>
+        <option value="Niagara Solid">Niagara Solid</option>
+        <option value="OCR A Extended">OCR A Extended</option>
+        <option value="Old English Text MT">Old English Text MT</option>
+        <option value="Onyx">Onyx</option>
+        <option value="Parchment">Parchment</option>
+        <option value="Playbill">Playbill</option>
+        <option value="Poor Richard">Poor Richard</option>
+        <option value="Pristina">Pristina</option>
+        <option value="Rage Italic">Rage Italic</option>
+        <option value="Ravie">Ravie</option>
+        <option value="Rockwell">Rockwell</option>
+        <option value="Rockwell Extra Bold">Rockwell Extra Bold</option>
+        <option value="Script MT Bold">Script MT Bold</option>
+        <option value="Showcard Gothic">Showcard Gothic</option>
+        <option value="Stencil">Stencil</option>
+        <option value="Tw Cen MT">Tw Cen MT</option>
+        <option value="Vineta BT">Vineta BT</option>
+        <option value="Vivaldi">Vivaldi</option>
+        <option value="Vladimir Script">Vladimir Script</option>
+        <option value="Wide Latin">Wide Latin</option>
+        </select>
+        <p style="color: rgb(117, 101, 216);">Note: Right-click on a word to delete it.</p>
+    </div>
+    
+    <div id="imgContainer"></div>
+<script src="script.js"></script>
+
+</body>
+</html>
