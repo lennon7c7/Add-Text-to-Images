@@ -1,16 +1,19 @@
 # Add-Text-to-Images
 
 ## Description
-This is a simple image editor built with JavaScript. It allows users to upload an image, add text to the image, and download the edited image. Users can also customize the text by changing its font, size, color, and style.
+This is a simple image editor built with JavaScript. It allows users to upload an image, add text to the image, and download the edited image. Users can customize the text by changing its font, size, colour, and style.
 
 ## Features
 - Upload an image from your device or via a URL
 - Add movable and editable text to the image
 - Customize the text:
-  - Change the font, size, and color
+  - Change the font, size, and colour
   - Apply bold, italic, underline, and shadow styles
 - Download the edited image
+- Works on mobile (Bluetooth mouse required)
 
+## Note
+- Dragging will not work on touchscreen devices, it is only possible with a mouse or trackpad
 
 ## How to Use
 1. Upload an image using the 'Upload' button or enter an image URL and click 'Load Image'.
@@ -22,7 +25,7 @@ This is a simple image editor built with JavaScript. It allows users to upload a
 
 ## Future Improvements
 - Add more text customization options, such as text alignment and presets.
-- Dragging needs to be fixed for touchscreen devices
+
 
 ## License
 See the LICENSE file for details.
