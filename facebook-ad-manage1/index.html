@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .text1 {
+            position: absolute;
+            z-index: 1000;
+            top: 16px;
+            left: 200px;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 0.875rem;
+            line-height: 1.42857;
+            letter-spacing: normal;
+            overflow-wrap: normal;
+            text-align: left;
+            color: rgba(0, 0, 0, 0.85);
+            font-weight: bold;
+        }
+
+        .text2 {
+            position: absolute;
+            z-index: 1000;
+            top: 206px;
+            left: 352px;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 0.875rem;
+            line-height: 1.42857;
+            letter-spacing: normal;
+            overflow-wrap: normal;
+            text-align: left;
+            color: rgba(0, 0, 0, 0.85);
+        }
+
+        .text3 {
+            position: absolute;
+            z-index: 1000;
+            top: 184px;
+            left: 686px;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 0.875rem;
+            line-height: 1.42857;
+            letter-spacing: normal;
+            overflow-wrap: normal;
+            text-align: left;
+            color: rgba(0, 0, 0, 1);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div id="imgContainer">
+    <img src="template/1.png" style="max-width: 100%;" alt="">
+    <div class="text1">
+        xxx.com
+    </div>
+    <div class="text2">
+        xxx.com
+    </div>
+    <div class="text3">
+        xxx.com
+    </div>
+</div>
+<script src="jquery-2.1.1.js"></script>
+<script>
+    function getUrlQueryVar(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split('&');
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=');
+            if (pair[0] === variable) {
+                return decodeURIComponent(pair[1]);
+            }
+        }
+        return '';
+    }
+
+    $('.text1, .text2, .text3').text(getUrlQueryVar('fakeSiteUrl'))
+</script>
+
+</body>
+</html>
