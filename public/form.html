@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate fake Facebook img</title>
+    <style>
+        .width100p {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<form action="http://127.0.0.1:31041/puppeteer/flow" method="post">
+    <label for="filename">dirname:</label>
+    <input type="text" id="filename" name="filename" class="width100p" required><br><br>
+
+    <label for="domains">domain:</label>
+    <textarea id="domains" name="domains" rows="10" cols="50" class="width100p" required></textarea><br><br>
+
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>
