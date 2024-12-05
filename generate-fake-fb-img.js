@@ -67,6 +67,8 @@ async function pageFlow(flows) {
             deviceScaleFactor: 1,
         });
 
+        flows.filename = `FB推广证明 ${flows.filename} ${nowString()}`
+
         // 如果目录 flows.filename 不存在，则创建
         if (!fs.existsSync(flows.filename)) {
             fs.mkdirSync(flows.filename);
@@ -78,6 +80,13 @@ async function pageFlow(flows) {
         domains = domains.split('\n');
 
         for (var i = 0, len = domains.length; i < len; i++) {
+            // domains[i] 去掉头、尾空格
+            domains[i] = domains[i].trim();
+            // domains[i] 去掉https://
+            domains[i] = domains[i].replace('https://', '');
+            // domains[i] 去掉尾部/
+            domains[i] = domains[i].replace('/', '');
+
             let dirname = `${flows.filename}/${domains[i]}`
             if (!fs.existsSync(dirname)) {
                 fs.mkdirSync(dirname);
